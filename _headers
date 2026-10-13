@@ -1,0 +1,19 @@
+/*
+  Cache des fichiers versionnés par leur nom
+*/
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*
+  En-tête et page d'accueil
+*/
+/
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
+
+/*
+  Le morceau doit accepter les requêtes par plages pour le seek
+*/
+/assets/edkhely-omri.mp3
+  Accept-Ranges: bytes
+  Cache-Control: public, max-age=31536000, immutable
